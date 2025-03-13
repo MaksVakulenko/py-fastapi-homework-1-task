@@ -29,3 +29,28 @@ class MovieListResponseSchema(BaseModel):
     next_page: Optional[str] = None
     total_pages: int
     total_items: int
+
+
+class MovieCreateRequestSchema(BaseModel):
+    name: str
+    date: date
+    score: float
+    genre: str
+    overview: str
+    crew: str
+    orig_title: str
+    status: str
+    orig_lang: str
+    budget: float
+    revenue: float
+    country: str
+
+
+class MovieUpdateRequestSchema(BaseModel):
+    name: Optional[str] = None
+    date: Optional[date] = None
+    score: Optional[float] = None
+    overview: Optional[str] = None
+    status: Optional[str] = None
+    budget: Optional[float] = None
+    revenue: Optional[float] = None
